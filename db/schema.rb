@@ -11,6 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160503195441) do
+
+  create_table "buyers", force: :cascade do |t|
+    t.string   "current_owner"
+    t.string   "borrower"
+    t.string   "prop_address"
+    t.string   "county"
+    t.integer  "purchase_price"
+    t.integer  "owner_coverage"
+    t.string   "lender_name"
+    t.string   "type_of_loan"
+    t.integer  "loan_number"
+    t.integer  "loan_amount"
+    t.string   "type_of_policy"
+    t.string   "icl"
+    t.string   "alta_endorsement_required"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
 end
